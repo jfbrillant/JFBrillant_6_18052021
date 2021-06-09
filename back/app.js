@@ -8,7 +8,7 @@ const path = require('path');
 
 mongoose
     .connect(
-        "mongodb+srv://jfbrillant:passjf@clusterp6.nrn9j.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
+        "mongodb+srv://jfbrillant:passjf@clusterp6.nrn9j.mongodb.net/Piquante?retryWrites=true&w=majority", {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         }
