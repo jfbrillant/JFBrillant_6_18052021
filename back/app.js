@@ -2,13 +2,15 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
+require('dotenv').config();
+
 const sauceRoutes = require('./routes/sauce');
 const userRoutes = require('./routes/user');
 const path = require('path');
 
 mongoose
     .connect(
-        "mongodb+srv://jfbrillant:passjf@clusterp6.nrn9j.mongodb.net/Piquante?retryWrites=true&w=majority", {
+        process.env.MONGODB_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         }
