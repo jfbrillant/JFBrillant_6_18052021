@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const helmet = require('helmet')
 
 require('dotenv').config();
 
@@ -34,6 +35,9 @@ app.use((req, res, next) => {
 });
 
 app.use(bodyParser.json());
+
+app.use(helmet());
+app.disable('x-powered-by');
 
 app.use('/api/sauces', sauceRoutes);
 app.use('/api/auth', userRoutes);
